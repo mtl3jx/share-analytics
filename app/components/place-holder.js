@@ -12,11 +12,11 @@ export default Ember.Component.extend({
 
     widthSetting: 2,
     heightSetting: 2,
-    
+
     width: 'width-2',
     height: 'height-2',
 
-    computedHeight: 200, 
+    computedHeight: 200,
     computedWidth: 200,
 
     resizedSignal: false,
@@ -137,6 +137,9 @@ export default Ember.Component.extend({
         },
         makeBar: function() {
             this.set('widgetType', 'bar-chart');
+        },
+        makeGauge: function() {
+            this.set('widgetType', 'gauge-chart');
         },
         removeWidget: function() {
             this.sendAction('removeChart', this.get('item'))
